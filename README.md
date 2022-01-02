@@ -10,7 +10,7 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 - [Importance Sampling](./chp02/imp_samp.py): importance sampling for finding expected value of a function
 
 **Chp03**
-- [Mean Field VI](./chp03/mean_field_mrf.py): mean field variational inference
+- [Mean Field VI](./chp03/mean_field_mrf.py): image denoising in Ising model
 
 **Chp04**
 - [Subset Generation](./chp04/subset_gen.py): a complete search algorithm
