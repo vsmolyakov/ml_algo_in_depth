@@ -13,10 +13,10 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 - [Mean Field VI](./chp03/mean_field_mrf.py): mean field variational inference
 
 **Chp04**
-- [Subset Generation](./chp04/subset_gen.py): complete search algorithm
-- [Fractional Knapsack](./chp04/knapsack_greedy.py): greedy algorithm
-- [Binary Search](./chp04/binary_search.py): divide and conquer algorithm
-- [Binomial Coefficients](./chp04/binomial_tree.py): dynamic programming algorithm
+- [Subset Generation](./chp04/subset_gen.py): a complete search algorithm
+- [Fractional Knapsack](./chp04/knapsack_greedy.py): a greedy algorithm
+- [Binary Search](./chp04/binary_search.py): a divide and conquer algorithm
+- [Binomial Coefficients](./chp04/binomial_tree.py): a dynamic programming algorithm
 
 
 
