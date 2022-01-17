@@ -16,7 +16,7 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 - [Subset Generation](./chp04/subset_gen.py): a complete search algorithm
 - [Fractional Knapsack](./chp04/knapsack_greedy.py): a greedy algorithm
 - [Binary Search](./chp04/binary_search.py): a divide and conquer algorithm
-- [Binomial Coefficients](./chp04/binomial_tree.py): a dynamic programming algorithm
+- [Binomial Coefficients](./chp04/binomial_coeffs.py): a dynamic programming algorithm
 
 
 
