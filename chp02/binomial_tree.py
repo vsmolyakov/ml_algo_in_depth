@@ -5,16 +5,7 @@ import matplotlib.pyplot as plt
 
 np.random.seed(42)
 
-def main():
-    
-    #model parameters
-    mu = 0.1      #mean
-    sigma = 0.15  #volatility
-    S0 = 1        #starting price
-    
-    N = 10000     #number of simulations
-    T = [21.0/252, 1.0]  #time horizon in years
-    step = 1.0/252       #time step in years
+def binomial_tree(mu, sigma, S0, N, T, step):
     
     #compute state price and probability
     u = np.exp(sigma * np.sqrt(step))    #up state price
@@ -52,6 +43,16 @@ def main():
                                 
     
 if __name__ == "__main__":
-    main()
+
+    #model parameters
+    mu = 0.1      #mean
+    sigma = 0.15  #volatility
+    S0 = 1        #starting price
+    
+    N = 10000     #number of simulations
+    T = [21.0/252, 1.0]  #time horizon in years
+    step = 1.0/252       #time step in years
+
+    binomial_tree(mu, sigma, S0, N, T, step)
     
     

@@ -3,10 +3,7 @@ import matplotlib.pyplot as plt
 
 np.random.seed(42)
 
-def pi_est():
-    
-    radius = 1
-    num_iter = int(1e4)
+def pi_est(radius=1, num_iter=int(1e4)):
     
     X = np.random.uniform(-radius,+radius,num_iter)
     Y = np.random.uniform(-radius,+radius,num_iter)

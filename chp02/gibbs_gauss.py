@@ -3,12 +3,11 @@ import matplotlib.pyplot as plt
 
 import itertools
 from numpy.linalg import inv
+from scipy.stats import multivariate_normal
 
 np.random.seed(42)
 
 class gibbs_gauss:
-    def __init__(self):
-        pass
 
     def gauss_conditional(self, mu, Sigma, setA, x):
         #computes P(X_A | X_B = x) = N(mu_{A|B}, Sigma_{A|B})
@@ -64,9 +63,19 @@ if __name__ == "__main__":
     gg = gibbs_gauss()
     gibbs_samples = gg.sample(mu, Sigma, xinit, num_samples)
 
+    scipy_samples = multivariate_normal.rvs(mean=mu, cov=Sigma, size=num_samples, random_state=42)
+
     plt.figure()
     plt.scatter(gibbs_samples[num_burnin:,0], gibbs_samples[num_burnin:,1], label='Gibbs Samples')
-    plt.grid(True); plt.legend(); 
+    plt.grid(True); plt.legend(); plt.xlim([-4,5])
     plt.title("Gibbs Sampling of Multivariate Gaussian"); plt.xlabel("X1"); plt.ylabel("X2")
     plt.savefig("./figures/gibbs_gauss.png")
     plt.show()
+    
+    plt.figure()
+    plt.scatter(scipy_samples[num_burnin:,0], scipy_samples[num_burnin:,1], label='Ground Truth Samples')
+    plt.grid(True); plt.legend(); plt.xlim([-4,5]) 
+    plt.title("Ground Truth Samples of Multivariate Gaussian"); plt.xlabel("X1"); plt.ylabel("X2")
+    plt.savefig("./figures/scipy_gauss.png")
+    plt.show()
+

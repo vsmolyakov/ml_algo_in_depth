@@ -7,22 +7,18 @@ from scipy.stats import multivariate_normal
 np.random.seed(42)
 
 class mh_gauss:
-    def __init__(self, num_samples):
+    def __init__(self, dim, K, num_samples, target_mu, target_sigma, target_pi, proposal_mu, proposal_sigma):
         #target params: p(x) = \sum_k pi(k) N(x; mu_k,Sigma_k)
-        self.dim = 2
-        self.K = 2
+        self.dim = dim 
+        self.K = K 
         self.num_samples = num_samples
-        self.target_mu = np.zeros((self.dim,self.K))
-        self.target_mu[:,0] = [4,0]
-        self.target_mu[:,1] = [-4,0]
-        self.target_sigma = np.zeros((self.dim, self.dim, self.K))
-        self.target_sigma[:,:,0] = [[2,1],[1,1]]
-        self.target_sigma[:,:,1] = [[1,0],[0,1]]
-        self.target_pi = np.array([0.4, 0.6])
+        self.target_mu = target_mu
+        self.target_sigma = target_sigma 
+        self.target_pi = target_pi 
         
         #proposal params: q(x) = N(x; mu, Sigma)
-        self.proposal_mu = np.zeros((self.dim,1)).flatten()
-        self.proposal_sigma = 10*np.eye(self.dim)
+        self.proposal_mu = proposal_mu 
+        self.proposal_sigma = proposal_sigma 
         
         #sample chain params
         self.n_accept = 0
@@ -69,8 +65,21 @@ class mh_gauss:
   
 if __name__ == "__main__":
 
-    num_samples = 5000
-    mhg = mh_gauss(num_samples)
+    dim = 2
+    K = 2
+    num_samples = 5000 
+    target_mu = np.zeros((dim,K))
+    target_mu[:,0] = [4,0]
+    target_mu[:,1] = [-4,0]
+    target_sigma = np.zeros((dim, dim, K))
+    target_sigma[:,:,0] = [[2,1],[1,1]]
+    target_sigma[:,:,1] = [[1,0],[0,1]]
+    target_pi = np.array([0.4, 0.6])
+
+    proposal_mu = np.zeros((dim,1)).flatten()
+    proposal_sigma = 10*np.eye(dim)
+
+    mhg = mh_gauss(dim, K, num_samples, target_mu, target_sigma, target_pi, proposal_mu, proposal_sigma)
     mhg.sample()
 
     plt.figure()

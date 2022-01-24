@@ -4,11 +4,7 @@ import matplotlib.pyplot as plt
 
 np.random.seed(42)
 
-def rand_walk():
-    
-    num_step = 150 #number of steps in a random walk
-    num_iter = 100 #number of iterations for averaging results
-    moves = np.array([[0, 1],[0, -1],[-1, 0],[1, 0]]) #2-D moves
+def rand_walk(num_step, num_iter, moves):
     
     #random walk stats
     square_dist = np.zeros(num_iter)
@@ -100,4 +96,9 @@ def rand_walk():
         
     
 if __name__ == "__main__":
-    rand_walk()
+
+    num_step = 150 #number of steps in a random walk
+    num_iter = 100 #number of iterations for averaging results
+    moves = np.array([[0, 1],[0, -1],[-1, 0],[1, 0]]) #2-D moves
+
+    rand_walk(num_step, num_iter, moves)

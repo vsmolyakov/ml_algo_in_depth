@@ -11,14 +11,14 @@ class importance_sampler:
     #         = sum_i f(x_i)w(x_i), where x_i ~ q(x)
     # e.g. for f(x) = 1(x \in A), E[f(x)] = P(A)
     
-    def __init__(self):
+    def __init__(self, k=1.5, mu=0.8, sigma=np.sqrt(1.5), c=3):
         #target params p(x)
-        self.k = 1.5
+        self.k = k 
 
         #proposal params q(x)
-        self.mu = 0.8
-        self.sigma = np.sqrt(1.5)
-        self.c = 3 #fix c, s.t. p(x) < c q(x)
+        self.mu = mu 
+        self.sigma = sigma 
+        self.c = c #fix c, s.t. p(x) < c q(x)
 
     def target_pdf(self, x):
         #p(x) ~ Chi(k=1.5)
