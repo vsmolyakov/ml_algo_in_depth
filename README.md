@@ -29,7 +29,7 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 - [KNN](./chp06/knn_reg.py): K-Nearest Neighbors regression
 - [BLR](./chp06/ridge_reg.py): Bayesian linear regression
 - [HBR](./chp06/hierarchical_regression.py): Hierarchical Bayesian regression
-- [GP](./chp06/gp_reg.py): Gaussian Process regression
+- [GPR](./chp06/gp_reg.py): Gaussian Process regression
 
 
 
