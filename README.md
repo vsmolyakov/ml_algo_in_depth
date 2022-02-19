@@ -18,6 +18,12 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 - [Binary Search](./chp04/binary_search.py): a divide and conquer algorithm
 - [Binomial Coefficients](./chp04/binomial_coeffs.py): a dynamic programming algorithm
 
+**Chp05**
+- [Perceptron](./chp05/perceptron.py): perceptron algorithm
+- [SVM](./chp05/svm.py): support vector machine
+- [SGD-LR](./chp05/sgd_lr.py): stochastic gradient descent logistic regression
+- [Naive Bayes](./chp05/naive_bayes.py): Bernoulli Naive Bayes algorithm
+- [CART](./chp05/cart.py): decision tree classification algorithm
 
 
 
