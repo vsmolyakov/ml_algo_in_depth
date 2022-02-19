@@ -25,7 +25,11 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 - [Naive Bayes](./chp05/naive_bayes.py): Bernoulli Naive Bayes algorithm
 - [CART](./chp05/cart.py): decision tree classification algorithm
 
-
+**Chp06: Regression Algorithms**
+- [KNN](./chp06/knn_reg.py): K-Nearest Neighbors regression
+- [BLR](./chp06/ridge_reg.py): Bayesian linear regression
+- [HBR](./chp06/hierarchical_regression.py): Hierarchical Bayesian regression
+- [GP](./chp06/gp_reg.py): Gaussian Process regression
 
 
 
