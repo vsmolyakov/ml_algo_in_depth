@@ -36,5 +36,5 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 - [HMM](./chp07/hmm.py): EM algorithm for Hidden Markov Models
 - Imbalanced Learning: [Tomek Links](./chp07/plot_tomek_links.py), [SMOTE](./chp07/plot_smote_regular.py)
 - Active Learning: [LR](./chp07/demo_logreg.py)
-- [BO](./chp07/bayes_opt_sklearn.py): Bayesian optimization
+- Bayesian optimization: [BO](./chp07/bayes_opt_sklearn.py)
 - Ensemble Learning: [Bagging](./chp07/bagging_clf.py), [Boosting](./chp07/adaboost_clf.py), [Stacking](./chp07/stacked_clf.py)
