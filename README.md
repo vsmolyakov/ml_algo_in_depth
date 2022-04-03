@@ -34,10 +34,7 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 **Chp07: Selected Supervised Learning Algorithms**
 - [Page Rank](./chp07/page_rank.py): Google page rank algorithm based on power iterations
 - [HMM](./chp07/hmm.py): EM algorithm for Hidden Markov Models
-- [ILU](./chp07/plot_tomek_links.py): imbalanced learning tomek links undersampling algorithm 
-- [ILO](./chp07/plot_smote_regular.py): imbalanced learning SMOTE oversampling algorithm
-- [ALLR](./chp07/demo_logreg.py): active learning logistic regression
+- [Imbalanced][TomekLinks](./chp07/plot_tomek_links.py), [SMOTE](./chp07/plot_smote_regular.py)
+- [Active Learning] [LR](./chp07/demo_logreg.py): active learning logistic regression
 - [BO](./chp07/bayes_opt_sklearn.py): Bayesian optimization
-- [Bagging](./chp07/bagging_clf.py): bagging ensemble algorithm
-- [Boosting](./chp07/adaboost_clf.py): adaboost ensemble algorithm
-- [Stacking](./chp07/stacked_clf.py): stacking ensemble algorithm
+- [Ensemble] [Bagging](./chp07/bagging_clf.py), [Boosting](./chp07/adaboost_clf.py), [Stacking](./chp07/stacked_clf.py)
