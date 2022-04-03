@@ -32,7 +32,7 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 - [GPR](./chp06/gp_reg.py): Gaussian Process regression
 
 **Chp07: Selected Supervised Learning Algorithms**
-- [Page Rank](./chp07/page_rank.py): Google page rank algorithm based on power iterations
+- [Page Rank](./chp07/page_rank.py): Google page rank algorithm
 - [HMM](./chp07/hmm.py): EM algorithm for Hidden Markov Models
 - Imbalanced Learning: [Tomek Links](./chp07/plot_tomek_links.py), [SMOTE](./chp07/plot_smote_regular.py)
 - Active Learning: [LR](./chp07/demo_logreg.py)
