@@ -43,6 +43,6 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 - [DP-Means](./chp08/dpmeans.py): Dirichlet Process (DP) K-Means
 - [EM-GMM](./chp08/gmm.py): EM algorithm for Gaussian Mixture Models
 - [PCA](./chp08/pca.py): Principal Component Analysis
-- [t-SNE manifold](./chp08/manifold_learning.py): t-SNE manifold learning
+- [t-SNE](./chp08/manifold_learning.py): t-SNE manifold learning
 
 
