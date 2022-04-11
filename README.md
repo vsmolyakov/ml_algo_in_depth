@@ -45,4 +45,13 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 - [PCA](./chp08/pca.py): Principal Component Analysis
 - [t-SNE](./chp08/manifold_learning.py): t-SNE manifold learning
 
+**Chp09: Selected Unsupervised Learning Algorithms**
+- [LDA](./chp09/lda.py): Variational Inference for Latent Dirichlet Allocation
+- [KDE](./chp09/kde.py): Kernel Density Estimator
+- [TPO](./chp09/portfolio_opt.py): Tangent Portfolio Optimization
+- [ICE](./chp09/inv_cov.py): Inverse Covariance Estimation
+- [SA](./chp09/sim_annealing.py): Simulated Annealing
+- [GA](./chp09/ga.py): Genetic Algorithm
+
+
 
