@@ -38,3 +38,11 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 - Active Learning: [LR](./chp07/demo_logreg.py)
 - Bayesian optimization: [BO](./chp07/bayes_opt_sklearn.py)
 - Ensemble Learning: [Bagging](./chp07/bagging_clf.py), [Boosting](./chp07/adaboost_clf.py), [Stacking](./chp07/stacked_clf.py)
+
+**Chp08: Unsupervised Learning Algorithms**
+- [DP-Means](./chp08/dpmeans.py): Dirichlet Process (DP) K-Means
+- [EM-GMM](./chp08/gmm.py): EM algorithm for Gaussian Mixture Models
+- [PCA](./chp08/pca.py): Principal Component Analysis
+- [t-SNE manifold](./chp08/manifold_learning.py): t-SNE manifold learning
+
+
