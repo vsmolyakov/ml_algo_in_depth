@@ -1,10 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib as mpl
 from sklearn.cluster import KMeans
 from scipy.stats import multivariate_normal
 from scipy.special import logsumexp
+from scipy import linalg
 
-np.random.seed(8)
+np.random.seed(3)
 
 class GMM:
 
@@ -112,7 +114,6 @@ if __name__ == '__main__':
     mu0, V0 = gmm.generate_data()
     gmm.gmm_em()
     
-    
     for k in range(mu0.shape[1]):
         print("cluster ", k)
         print("-----------")
@@ -129,3 +130,24 @@ if __name__ == '__main__':
         print(gmm.mu[:,k])
         print("GMM-EM covariance:")
         print(gmm.sigma[:,:,k])
+
+    plt.figure()
+    ax = plt.axes()
+    plt.scatter(gmm.X[:,0], gmm.X[:,1], color='b', alpha=0.5)
+
+    for k in range(mu0.shape[1]):
+
+        v, w = linalg.eigh(gmm.sigma[:,:,k])
+        v = 2.0 * np.sqrt(2.0) * np.sqrt(v)
+        u = w[0] / linalg.norm(w[0])
+
+        # plot an ellipse to show the Gaussian component
+        angle = np.arctan(u[1] / u[0])
+        angle = 180.0 * angle / np.pi  # convert to degrees
+        ell = mpl.patches.Ellipse(gmm.mu[:,k], v[0], v[1], 180.0 + angle, color='r', alpha=0.5)
+        ax.add_patch(ell)
+
+        # plot cluster centroids
+        plt.scatter(gmm.mu[0,k], gmm.mu[1,k], s=80, marker='x', color='k', alpha=1)
+    plt.title("Gaussian Mixture Model"); plt.xlabel("X1"); plt.ylabel("X2")
+    plt.show()
