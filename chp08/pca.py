@@ -1,4 +1,7 @@
 import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(42)
 
 class PCA():
     def __init__(self, n_components = 2):
@@ -27,7 +30,7 @@ class PCA():
 
 if __name__ == "__main__":
 
-    n = 10
+    n = 20
     d = 5
     X = np.random.rand(n,d)
 
@@ -35,3 +38,8 @@ if __name__ == "__main__":
     X_pca = pca.transform(X)
 
     print(X_pca)
+
+    plt.figure()
+    plt.scatter(X_pca[:,0], X_pca[:,1], color='b', alpha=0.5)
+    plt.title("Principal Component Analysis"); plt.xlabel("X1"); plt.ylabel("X2")
+    plt.show()
