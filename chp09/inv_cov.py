@@ -50,7 +50,7 @@ def main():
     qopen, qclose = [], []
     data_close, data_open = pd.DataFrame(), pd.DataFrame()    
     for ticker in symbols:
-        price = web.DataReader(ticker, 'google', start, end)
+        price = web.DataReader(ticker, 'stooq', start, end)
         qopen.append(price['Open'])
         qclose.append(price['Close'])
 
@@ -67,13 +67,13 @@ def main():
     X /= X.std(axis=0) #standardize to use correlations rather than covariance
                 
     #estimate inverse covariance    
-    graph = GraphLassoCV()
+    graph = GraphicalLassoCV()
     graph.fit(X)
     
     gl_cov = graph.covariance_
     gl_prec = graph.precision_
     gl_alphas =graph.cv_alphas_
-    gl_scores = np.mean(graph.grid_scores, axis=1)
+    gl_scores = graph.cv_results_['mean_test_score']
 
     plt.figure()        
     sns.heatmap(gl_prec, xticklabels=names, yticklabels=names)
@@ -112,7 +112,7 @@ def main():
     non_zero = (np.abs(np.triu(partial_corr, k=1)) > 0.02)  #connectivity matrix
     
     #plot the nodes
-    plt.scatter(embedding[0], embedding[1], s = 100*d**2, c = labels, cmap = plt.cm.spectral)
+    plt.scatter(embedding[0], embedding[1], s = 100*d**2, c = labels, cmap = plt.cm.Spectral)
     
     #plot the edges
     start_idx, end_idx = np.where(non_zero)
