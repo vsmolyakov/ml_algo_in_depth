@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 from sklearn.neighbors import KDTree
-from pandas.tools.plotting import scatter_matrix
+from pandas.plotting import scatter_matrix
 from scipy.spatial import ConvexHull
 
 import pandas_datareader.data as web
@@ -13,7 +13,7 @@ import pytz
 
 STOCKS = ['SPY','LQD','TIP','GLD','MSFT']
 
-np.random.seed(0)    
+np.random.seed(42)    
 
 if __name__ == "__main__":
 
@@ -27,7 +27,7 @@ if __name__ == "__main__":
     data = pd.DataFrame()
     series = []
     for ticker in STOCKS:
-        price = web.DataReader(ticker, 'google', start, end)
+        price = web.DataReader(ticker, 'stooq', start, end)
         series.append(price['Close'])
 
     data = pd.concat(series, axis=1)
@@ -92,7 +92,7 @@ if __name__ == "__main__":
     kdt = KDTree(points)
     query_point = np.array([2, 115]).reshape(1,-1)
     kdt_dist, kdt_idx = kdt.query(query_point,k=knn)
-    print "top-%d closest to query portfolios:" %knn
-    print "values: ", pv[kdt_idx.ravel()]
-    print "sigmas: ", ps[kdt_idx.ravel()]
+    print("top-%d closest to query portfolios:" %knn)
+    print("values: ", pv[kdt_idx.ravel()])
+    print("sigmas: ", ps[kdt_idx.ravel()])
     
