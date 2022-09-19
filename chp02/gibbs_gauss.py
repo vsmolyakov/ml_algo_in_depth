@@ -66,16 +66,11 @@ if __name__ == "__main__":
     scipy_samples = multivariate_normal.rvs(mean=mu, cov=Sigma, size=num_samples, random_state=42)
 
     plt.figure()
-    plt.scatter(gibbs_samples[num_burnin:,0], gibbs_samples[num_burnin:,1], label='Gibbs Samples')
+    plt.scatter(gibbs_samples[num_burnin:,0], gibbs_samples[num_burnin:,1], c = 'blue', marker='s', alpha=0.8, label='Gibbs Samples')
+    plt.scatter(scipy_samples[num_burnin:,0], scipy_samples[num_burnin:,1], c = 'red', alpha=0.8, label='Ground Truth Samples')
     plt.grid(True); plt.legend(); plt.xlim([-4,5])
     plt.title("Gibbs Sampling of Multivariate Gaussian"); plt.xlabel("X1"); plt.ylabel("X2")
-    plt.savefig("./figures/gibbs_gauss.png")
+    #plt.savefig("./figures/gibbs_gauss.png")
     plt.show()
     
-    plt.figure()
-    plt.scatter(scipy_samples[num_burnin:,0], scipy_samples[num_burnin:,1], label='Ground Truth Samples')
-    plt.grid(True); plt.legend(); plt.xlim([-4,5]) 
-    plt.title("Ground Truth Samples of Multivariate Gaussian"); plt.xlabel("X1"); plt.ylabel("X2")
-    plt.savefig("./figures/scipy_gauss.png")
-    plt.show()
 

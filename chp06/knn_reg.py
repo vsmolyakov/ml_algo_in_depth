@@ -1,4 +1,3 @@
-import math
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -15,8 +14,8 @@ class KNN():
     def euclidean_distance(self, x1, x2):
         dist = 0
         for i in range(len(x1)):
-            dist += pow((x1[i] - x2[i]), 2)
-        return math.sqrt(dist)
+            dist += np.power((x1[i] - x2[i]), 2)
+        return np.sqrt(dist)
     
     def knn_search(self, X_train, y_train, Q):
         y_pred = np.empty(Q.shape[0])        

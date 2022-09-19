@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+np.random.seed(14)
+
 class KDE():
 
     def __init__(self):

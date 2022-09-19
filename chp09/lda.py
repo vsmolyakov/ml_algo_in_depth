@@ -2,10 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.datasets import fetch_20newsgroups
 from sklearn.feature_extraction.text import TfidfVectorizer
-
+from wordcloud import WordCloud
 from scipy.special import digamma, gammaln
 
-np.random.seed(42)
+np.random.seed(12)
 
 class LDA:
     def __init__(self, A, K):
@@ -184,6 +184,18 @@ if __name__ == "__main__":
     for k in range(num_topics):
         print("topic: ", k)
         print("----------")
-        top_words = np.argsort(lda.lmbda[k,:])[-5:]
+        topic_words = ""
+        top_words = np.argsort(lda.lmbda[k,:])[-10:]
         for i in range(len(top_words)):
+            topic_words += id2word[top_words[i]] + " "
             print(id2word[top_words[i]])
+    
+        wordcloud = WordCloud(width = 800, height = 800,
+                    background_color ='white',
+                    min_font_size = 10).generate(topic_words)
+
+        plt.figure()
+        plt.imshow(wordcloud)
+        plt.axis("off")
+        plt.tight_layout(pad = 0)
+        plt.show()
