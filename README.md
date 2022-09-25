@@ -59,5 +59,7 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 - [ResNet](./chp10/image_search.py): ResNet50 image search on CalTech101 dataset
 - [LSTM](./chp10/lstm_sentiment.py): LSTM sentiment classification of IMDB movie dataset
 - [MINN](./chp10/multi_input_nn.py): Mult-Input Neural Net model for sequence similarity of Quora question pairs dataset
+- [OPT](./chp10/keras_optimizers.py): Neural Net Optimizers
+
 
 
