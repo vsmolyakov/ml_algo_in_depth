@@ -53,5 +53,11 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 - [SA](./chp09/sim_annealing.py): Simulated Annealing
 - [GA](./chp09/ga.py): Genetic Algorithm
 
+**Chp10: Fundamental Deep Learning Algorithms**
+- [MLP](./chp10/mlp.py): Multi-Layer Perceptron
+- [LeNet](./chp10/lenet.py): LeNet for MNIST digit classification
+- [ResNet](./chp10/image_search.py): ResNet50 image search on CalTech101 dataset
+- [LSTM](./chp10/lstm_sentiment.py): LSTM sentiment classification of IMDB movie dataset
+- [MINN](./chp10/multi_input_nn.py): Mult-Input Neural Net model for sequence similarity of Quora question pairs dataset
 
 
