@@ -61,5 +61,7 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 - [MINN](./chp10/multi_input_nn.py): Mult-Input Neural Net model for sequence similarity of Quora question pairs dataset
 - [OPT](./chp10/keras_optimizers.py): Neural Net Optimizers
 
+**Chp11: Advanced Deep Learning Algorithms**
+- [LSTM-VAE](./chp11/lstm_vae.py): LSTM-VAE time-series anomaly detector
 
 
