@@ -62,6 +62,6 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 - [OPT](./chp10/keras_optimizers.py): Neural Net Optimizers
 
 **Chp11: Advanced Deep Learning Algorithms**
-- [LSTM-VAE](./chp11/lstm_vae.py): LSTM-VAE time-series anomaly detector
+- [LSTM-VAE](./chp11/lstm_vae.py): time-series anomaly detector
 
 
