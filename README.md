@@ -63,8 +63,9 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 
 **Chp11: Advanced Deep Learning Algorithms**
 - [LSTM-VAE](./chp11/lstm_vae.py): time-series anomaly detector
-- [MDN](./chp11/keras_mdn.py): Mixture Density Network
+- [MDN](./chp11/keras_mdn.py): mixture density network
 - [Transformer](./chp11/transformer.py): for text classification
+- [GNN](./chp11/spektral_gnn.py): graph neural network
 
 
 
