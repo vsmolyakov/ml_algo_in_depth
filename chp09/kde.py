@@ -51,7 +51,7 @@ class KDE():
         x_dim = 1  #dimension of x
         h = 10 #standard deviation
 
-        rnap_density_support = np.linspace(0, np.max(self.data), self.L)
+        rnap_density_support = np.arange(np.max(self.data))
         rnap_density_est = 0
         for i in range(np.sum(self.bin_counts)):
             rnap_density_est += (1/(2*np.pi*h**2)**(x_dim/2.0))*np.exp(-(rnap_density_support - self.data[i])**2 / (2.0*h**2))
