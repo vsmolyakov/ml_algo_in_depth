@@ -63,6 +63,9 @@ class naive_bayes:
         
 if __name__ == "__main__":
 
+    import nltk
+    nltk.download('stopwords')
+
     #load data
     print("loading 20 newsgroups dataset...")
     tic = time()

@@ -1,3 +1,5 @@
 numpy
 matplotlib
 seaborn==0.12.1
+sklearn
+nltk
