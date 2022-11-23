@@ -88,7 +88,7 @@ def rand_walk(num_step, num_iter, moves):
     plt.show()
 
     plt.figure()
-    sns.distplot(square_dist)
+    sns.displot(square_dist)
     plt.xlim(0,np.max(square_dist))
     plt.title('square distance of the random walk')
     plt.xlabel('square distance (X^2 + Y^2)')
