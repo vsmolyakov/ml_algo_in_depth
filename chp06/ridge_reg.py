@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 import matplotlib.pyplot as plt
-from sklearn.datasets import load_boston
+from sklearn.datasets import fetch_california_housing 
 
 class ridge_reg():
 
@@ -37,10 +37,13 @@ class ridge_reg():
 
 if __name__ == "__main__":
     
-    X, y = load_boston(return_X_y=True)
-    X_reg = X[:,6].reshape(-1,1) #house age 
+    X, y = fetch_california_housing(return_X_y=True)
+    X_reg = X[:,2].reshape(-1,1) #avg number of rooms 
     X_std = (X_reg - X_reg.mean())/X.std() #standard scaling
     y_std = (y - y.mean())/y.std() #standard scaling
+
+    X_std = X_std[:200,:]
+    y_std = y_std[:200]
 
     rr = ridge_reg()
     rr.fit(X_std, y_std)
@@ -58,7 +61,7 @@ if __name__ == "__main__":
     plt.figure()
     plt.scatter(X_std, y_std)
     plt.plot(np.linspace(-1,1), rr.w[1]*np.linspace(-1,1)+rr.w[0], c='red')
-    plt.xlim([-0.5,0.23])
-    plt.xlabel("scaled house age")
-    plt.ylabel("house price")
+    plt.xlim([-0.01,0.01])
+    plt.xlabel("scaled avg num of rooms")
+    plt.ylabel("scaled house price")
     plt.show()
