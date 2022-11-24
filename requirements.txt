@@ -1,5 +1,8 @@
 numpy
+pandas
 matplotlib
 seaborn==0.12.1
-sklearn
 nltk
+sklearn
+pymc3
+bayesian-optimization
