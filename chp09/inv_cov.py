@@ -72,7 +72,7 @@ def main():
     
     gl_cov = graph.covariance_
     gl_prec = graph.precision_
-    gl_alphas =graph.cv_alphas_
+    gl_alphas = graph.cv_alphas_
     gl_scores = graph.cv_results_['mean_test_score']
 
     plt.figure()        

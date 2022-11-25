@@ -3,6 +3,9 @@ pandas
 matplotlib
 seaborn==0.12.1
 nltk
-sklearn
+scikit-learn
 pymc3
 bayesian-optimization
+scipy
+wordcloud
+pandas-datareader
