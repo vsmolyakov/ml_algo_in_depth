@@ -67,6 +67,12 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 - [Transformer](./chp11/transformer.py): for text classification
 - [GNN](./chp11/spektral_gnn.py): graph neural network
 
+**Environment**
 
+To install required libraries, please run the following command:
+
+```
+pip install -r requirements.txt
+```
 
 
