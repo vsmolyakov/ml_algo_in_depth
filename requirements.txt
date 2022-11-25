@@ -9,3 +9,11 @@ bayesian-optimization
 scipy
 wordcloud
 pandas-datareader
+tqdm
+Pillow
+cvxopt
+mlxtend
+imblearn
+networkx
+tensorflow
+
