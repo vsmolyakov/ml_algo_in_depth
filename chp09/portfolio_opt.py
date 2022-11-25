@@ -33,7 +33,7 @@ if __name__ == "__main__":
     data = pd.concat(series, axis=1)
     data.columns = STOCKS
     data = data.dropna()
-    
+
     #plot data correlations
     scatter_matrix(data, alpha=0.2, diagonal='kde')
     plt.show()
@@ -75,11 +75,11 @@ if __name__ == "__main__":
     
     points = np.vstack((ps,pv)).T
     hull = ConvexHull(points)
-            
+    
     plt.figure()
-    plt.scatter(ps, pv, marker='o', color='b', linewidth = '3.0', label = 'tangent portfolio')
-    plt.scatter(volatility, np.sum(adj_price * weights), marker = 's', color = 'r', linewidth = '3.0', label = 'current')
-    plt.plot(points[hull.vertices,0], points[hull.vertices,1], linewidth = '2.0')    
+    plt.scatter(ps, pv, marker='o', color='b', linewidth = 3.0, label = 'tangent portfolio')
+    plt.scatter(volatility, np.sum(adj_price * weights), marker = 's', color = 'r', linewidth = 3.0, label = 'current')
+    plt.plot(points[hull.vertices,0], points[hull.vertices,1], linewidth = 2.0)    
     plt.title('expected return vs volatility')
     plt.ylabel('expected price')
     plt.xlabel('portfolio std dev')
