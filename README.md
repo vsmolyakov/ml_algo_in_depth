@@ -69,9 +69,16 @@ ML Algorithms From Scratch: Bayesian Inference and Deep Learning
 
 **Environment**
 
-To install required libraries, please run the following command:
+To install required libraries, please run the following commands:
 
 ```
+python3 -m venv ml-algo
+
+source ml-algo/bin/activate    //in linux
+.\ml-algo\Scripts\activate.bat //in CMD windows
+.\ml-algo\Scripts\Activate.ps1 //in Powershell windows
+
+
 pip install -r requirements.txt
 ```
 
