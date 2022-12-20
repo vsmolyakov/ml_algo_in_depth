@@ -81,4 +81,23 @@ source ml-algo/bin/activate    //in linux
 pip install -r requirements.txt
 ```
 
+**Manning Early Access Preview (MEAP)**
 
+This book is now available in Manning Early Access Preview.
+Link to book: https://www.manning.com/books/machine-learning-algorithms-in-depth
+
+It will help you develop mathematical intuition for classic and modern ML algorithms, learn the fundamentals of Bayesian inference and deep learning, as well as data structures and algorithmic paradigms in ML!
+
+**Citation**
+
+You are welcome to cite the book as follows:
+
+```
+@book{MLAlgoInDepth,
+  author = {Vadim Smolyakov},
+  title = {Machine Learning Algorithms in Depth},
+  year = {2022},
+  isbn = {9781633439214},
+  publisher = {Manning Publications},
+}
+```
