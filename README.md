@@ -86,6 +86,10 @@ pip install -r requirements.txt
 This book is now available in Manning Early Access Preview.
 Link to book: https://www.manning.com/books/machine-learning-algorithms-in-depth
 
+<p align="center">
+<img src="https://github.com/vsmolyakov/ml_algo_in_depth/blob/master/figures/meap.png"/>
+</p>
+
 It will help you develop mathematical intuition for classic and modern ML algorithms, learn the fundamentals of Bayesian inference and deep learning, as well as data structures and algorithmic paradigms in ML!
 
 **Citation**
@@ -98,6 +102,6 @@ You are welcome to cite the book as follows:
   title = {Machine Learning Algorithms in Depth},
   year = {2022},
   isbn = {9781633439214},
-  publisher = {Manning Publications},
+  publisher = {Manning Publications}
 }
 ```
