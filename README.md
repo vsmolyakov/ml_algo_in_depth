@@ -83,8 +83,8 @@ pip install -r requirements.txt
 
 **Manning Early Access Preview (MEAP)**
 
-This book is now available in Manning Early Access Preview.
-Link to book: https://www.manning.com/books/machine-learning-algorithms-in-depth
+This book is now available in Manning Early Access Preview.  
+Link to book: https://www.manning.com/books/machine-learning-algorthms-in-depth
 
 <p align="left">
 <img src="https://github.com/vsmolyakov/ml_algo_in_depth/blob/main/figures/meap.png"/>
