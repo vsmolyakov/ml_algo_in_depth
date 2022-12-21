@@ -100,7 +100,7 @@ You are welcome to cite the book as follows:
 @book{MLAlgoInDepth,
   author = {Vadim Smolyakov},
   title = {Machine Learning Algorithms in Depth},
-  year = {2022},
+  year = {2023},
   isbn = {9781633439214},
   publisher = {Manning Publications}
 }
