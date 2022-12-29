@@ -27,7 +27,7 @@ import math
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 
-np.random.seed(42)
+tf.keras.utils.set_random_seed(42)
 
 SAVE_PATH = "/content/drive/MyDrive/Colab Notebooks/data/"
 
@@ -79,12 +79,12 @@ def NLLLoss(y_true, y_pred):
     return tf.maximum(result, 0)
 
 #generate data
-X_data, y_data, z_data, pi_true, mu_true, sigma_true = generate_data(1024)
+X_data, y_data, z_data, pi_true, mu_true, sigma_true = generate_data(4096)
 
 data_dim = X_data.shape[1]
 num_clusters = len(mu_true)
 
-num_train = 512 
+num_train = 3500
 X_train, X_test, y_train, y_test = X_data[:num_train,:], X_data[num_train:,:], y_data[:num_train,:], y_data[num_train:,:]
 z_train, z_test = z_data[:num_train], z_data[num_train:]
 
