@@ -16,4 +16,6 @@ mlxtend
 imblearn
 networkx
 tensorflow
+tensorflow-probability
+spektral
 
