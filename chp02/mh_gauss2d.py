@@ -87,5 +87,5 @@ if __name__ == "__main__":
     plt.grid(True); plt.legend()
     plt.title("Metropolis-Hastings Sampling of 2D Gaussian Mixture")
     plt.xlabel("X1"); plt.ylabel("X2")
-    plt.savefig("./figures/mh_gauss2d.png")
+    #plt.savefig("./figures/mh_gauss2d.png")
     plt.show()
