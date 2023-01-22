@@ -19,7 +19,7 @@ from keras.callbacks import EarlyStopping
 
 import matplotlib.pyplot as plt
 
-np.random.seed(42)
+tf.keras.utils.set_random_seed(42)
 
 SAVE_PATH = "/content/drive/MyDrive/Colab Notebooks/data/"
 
@@ -36,8 +36,8 @@ if __name__ == "__main__":
     seq_len = 200  # first 200 words of each movie review
     (x_train, y_train), (x_val, y_val) = keras.datasets.imdb.load_data(num_words=max_words)
 
-    x_train = sequence.pad_sequences(x_train, maxlen=seq_len)
-    x_val = sequence.pad_sequences(x_val, maxlen=seq_len)
+    x_train = keras.utils.pad_sequences(x_train, maxlen=seq_len)
+    x_val = keras.utils.pad_sequences(x_val, maxlen=seq_len)
 
     #training params
     batch_size = 256 
@@ -83,8 +83,8 @@ if __name__ == "__main__":
     print("Test accuracy:", test_scores[1])
 
     plt.figure()
-    plt.plot(hist.history['loss'], c='b', lw=2.0, label='train')
-    plt.plot(hist.history['val_loss'], c='r', lw=2.0, label='val')
+    plt.plot(hist.history['loss'], 'b', lw=2.0, label='train')
+    plt.plot(hist.history['val_loss'], '--r', lw=2.0, label='val')
     plt.title('LSTM model')
     plt.xlabel('Epochs')
     plt.ylabel('Cross-Entropy Loss')
@@ -93,8 +93,8 @@ if __name__ == "__main__":
     #plt.savefig('./figures/lstm_loss.png')
 
     plt.figure()
-    plt.plot(hist.history['accuracy'], c='b', lw=2.0, label='train')
-    plt.plot(hist.history['val_accuracy'], c='r', lw=2.0, label='val')
+    plt.plot(hist.history['accuracy'], 'b', lw=2.0, label='train')
+    plt.plot(hist.history['val_accuracy'], '--r', lw=2.0, label='val')
     plt.title('LSTM model')
     plt.xlabel('Epochs')
     plt.ylabel('Accuracy')

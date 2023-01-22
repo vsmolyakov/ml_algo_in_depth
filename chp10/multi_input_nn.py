@@ -17,7 +17,7 @@ from keras.layers import TimeDistributed, Bidirectional, BatchNormalization
 
 from keras import backend as K
 from keras.preprocessing.text import Tokenizer
-from keras.preprocessing.sequence import pad_sequences
+from keras.utils import pad_sequences
 
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer
@@ -33,7 +33,7 @@ from keras.callbacks import EarlyStopping
 
 import matplotlib.pyplot as plt
 
-np.random.seed(42)
+tf.keras.utils.set_random_seed(42)
 
 SAVE_PATH = "/content/drive/MyDrive/Colab Notebooks/data/"
 DATA_PATH = "/content/drive/MyDrive/data/"
