@@ -14,7 +14,7 @@ Pillow
 cvxopt
 mlxtend
 imblearn
-networkx
+networkx==2.7
 tensorflow
 tensorflow-probability
 spektral
