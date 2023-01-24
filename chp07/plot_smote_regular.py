@@ -7,8 +7,8 @@ from sklearn.decomposition import PCA
 from imblearn.over_sampling import SMOTE
 
 def plot_resampling(ax, X, y, title):
-    c0 = ax.scatter(X[y == 0, 0], X[y == 0, 1], label="Class #0", alpha=0.5)
-    c1 = ax.scatter(X[y == 1, 0], X[y == 1, 1], label="Class #1", alpha=0.5)
+    c0 = ax.scatter(X[y == 0, 0], X[y == 0, 1], label="Class #0", marker="o", alpha=0.5)
+    c1 = ax.scatter(X[y == 1, 0], X[y == 1, 1], label="Class #1", marker="s", alpha=0.5)
     ax.set_title(title)
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
@@ -34,7 +34,7 @@ def main():
 
     # apply regular SMOTE
     method = SMOTE()
-    X_res, y_res = method.fit_sample(X, y)
+    X_res, y_res = method.fit_resample(X, y)
     X_res_vis = pca.transform(X_res)
 
     # generate plots

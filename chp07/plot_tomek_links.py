@@ -29,9 +29,9 @@ def main():
     ax = fig.add_subplot(1, 1, 1)
 
     idx_class_0 = y_resampled == 0
-    plt.scatter(X_resampled[idx_class_0, 0], X_resampled[idx_class_0, 1], alpha=.8, label='Class #0')
-    plt.scatter(X_resampled[~idx_class_0, 0], X_resampled[~idx_class_0, 1], alpha=.8, label='Class #1')
-    plt.scatter(X_syn[idx_samples_removed, 0], X_syn[idx_samples_removed, 1], alpha=.8, label='Removed samples')
+    plt.scatter(X_resampled[idx_class_0, 0], X_resampled[idx_class_0, 1], alpha=.8, marker = "o", label='Class #0')
+    plt.scatter(X_resampled[~idx_class_0, 0], X_resampled[~idx_class_0, 1], alpha=.8, marker = "s", label='Class #1')
+    plt.scatter(X_syn[idx_samples_removed, 0], X_syn[idx_samples_removed, 1], alpha=.8, marker = "v", label='Removed samples')
     plt.title('Undersampling: Tomek links')
     plt.legend()
     plt.show()
