@@ -67,8 +67,8 @@ if __name__ == "__main__":
     est2 = kde.kernel()
 
     plt.figure()
-    plt.plot(est1, c='b', label='histogram')
-    plt.plot(est2, c='r', label='gaussian kernel')
-    plt.title("RNA-seq density estimate based on negative binomial sampling model")
+    plt.plot(est1, '-b', label='histogram')
+    plt.plot(est2, '--r', label='gaussian kernel')
+    plt.title("RNA-seq density estimate based on negative binomial model")
     plt.xlabel("read length, [base pairs]"); plt.ylabel("density"); plt.legend()
     plt.show()
