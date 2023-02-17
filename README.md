@@ -1,5 +1,5 @@
 # Machine Learning Algorithms in Depth
-ML Algorithms in Depth: Bayesian Inference and Deep Learning
+ML Algorithms in Depth: Bayesian Inference and Deep Learning and Machine learning and Artificial Learning 
 
 **Chp02: Markov Chain Monte Carlo (MCMC)**
 - [Estimate Pi](./chp02/monte_carlo_pi.py): Monte Carlo estimate of Pi
