@@ -16,7 +16,7 @@ def pi_est(radius=1, num_iter=int(1e4)):
     
     I_hat = np.mean(samples)
     pi_hat = I_hat/radius ** 2
-    pi_hat_se = np.std(samples)/np.sqrt(num_iter)    
+    pi_hat_se = np.std(samples)/np.sqrt(num_iter)/radius ** 2
     print("pi est: {} +/- {:f}".format(pi_hat, pi_hat_se))
     
     plt.figure()
