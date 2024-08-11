@@ -34,9 +34,9 @@ class mh_gauss:
         #end for
         return prob
 
-    def proposal_pdf(self, x):
+    def proposal_pdf(self, x, mu):
         #q(x) = N(x; mu, Sigma)
-        return multivariate_normal.pdf(x, self.proposal_mu, self.proposal_sigma)
+        return multivariate_normal.pdf(x, mu, self.proposal_sigma)
 
     def sample(self):
         #draw init sample from proposal
@@ -49,7 +49,7 @@ class mh_gauss:
             x_new = multivariate_normal.rvs(x_curr, self.proposal_sigma, 1)
 
             #MH ratio
-            self.alpha[i] = self.proposal_pdf(x_new) / self.proposal_pdf(x_curr) #q(x|x')/q(x'|x)
+            self.alpha[i] = self.proposal_pdf(x_curr, x_new) / self.proposal_pdf(x_new, x_curr) #q(x|x')/q(x'|x)
             self.alpha[i] = self.alpha[i] * (self.target_pdf(x_new)/self.target_pdf(x_curr)) #alpha x p(x')/p(x)
 
             #MH acceptance probability
